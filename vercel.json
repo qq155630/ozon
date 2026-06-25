@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/weight.js": {
+      "maxDuration": 10
+    }
+  }
+}
