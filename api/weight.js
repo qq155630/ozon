@@ -127,7 +127,10 @@ export default async function handler(req, res) {
   } catch (e) {
     return res.status(500).json({ 
       success: false, 
-      error: e.message 
+      error: e.message,
+      name: e.name,
+      cause: e.cause ? String(e.cause) : null,
+      stack: e.stack ? e.stack.split('\n').slice(0, 5).join('\n') : null
     });
   }
 }
